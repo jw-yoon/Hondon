@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>dizzy</title>
+	<style>
+		#mymy{background-color: black; margin: auto; padding: block; color: white;}
+		.pone{color: white; width:100px; height: 50px; font-size: 18pt; position: absolute; top: 700px; left: 400px; top:500px; z-index: 99;}
+		.thum1{height: 1000px; width: 1000px; opacity: 0.3; position: absolute; left: 300px; top: 50px;}
+		.thum1:hover{opacity: 1;}
+		.thum2{width: 200px; height: 200px; opacity: 0.3; position: absolute; left: 360px; top: 650px; border-radius: 90px; }
+		.thum2:hover{opacity: 1;}
+		.thum3{width: 100px; height: 158px; opacity: 0.7; position: absolute; left: 1150px; top: 600px; }
+		.thum3:hover{opacity: 1;}
+		.thum4{width: 250px; height: 250px; opacity: 0.3; position: absolute; left: 900px; top: 780px; }
+		.thum4:hover{opacity: 1;}
+		.thum5{width: 250px; height: 250px; opacity: 0.5; position: absolute; left: 320px; top: 80px; }
+		.thum5:hover{opacity: 1; z-index: 80;}
+	</style>
+</head >
+<body id="mymy">
+	<img src="a.gif" class="thum1" id="a">
+	<img src="b.gif" class="thum2" id="b">
+	<img src="c.png" class="thum3" id="c">
+	<img src="d.gif" class="thum4" id="d">
+	<img src="f.png" class="thum5" id="f">
+	<audio src="a.mp3" id="aa" loop></audio>
+	<audio src="b.mp3" id="bb" loop></audio>
+	<audio src="c.mp3" id="cc" loop></audio>
+	<audio src="d.mp3" id="dd" loop></audio>
+	<audio src="f.mp3" id="ff" loop></audio>
+
+
+	<script type="text/javascript">
+	var astate = "off";
+
+	aa.volume = 0.6
+	a.onclick = function(){
+		if(astate == "off"){
+			aa.play(); astate="on";
+			a.style.opacity ="1";
+		}else{
+		 aa.pause(); astate="off";
+		 a.style.opacity = "0.3";
+		}
+	}
+	bb.volume = 0.4;
+	var bstate = "off"
+	b.onclick = function(){
+		if(bstate == "off"){
+			bb.play(); bstate="on";
+			b.style.opacity="1";
+		}else{
+			bb.pause(); bstate="off";
+			b.style.opacity = "0.3";
+			mymy.body.style.background = "url(b.jpg)";
+			mymy.body.style.backgroundsize = "cover";
+		}
+	}
+	cc.volume = 1;
+	var cstate = "off"
+	c.onclick = function(){
+		if(cstate == "off"){
+			cc.play(); cstate="on";
+			c.style.opacity="1";
+		}else{
+			cc.pause(); cstate="off";
+			c.style.opacity = "0.7";
+		}
+	}
+	dd.volume = 1;
+	var cstate = "off"
+	d.onclick = function(){
+		if(cstate == "off"){
+			dd.play(); cstate="on";
+			d.style.opacity="1";
+		}else{
+			dd.pause(); cstate="off";
+			d.style.opacity = "0.3";
+		}
+	}
+	ff.volume = 1;
+	var cstate = "off"
+	f.onclick = function(){
+		if(cstate == "off"){
+			ff.play(); cstate="on";
+			f.style.opacity="1";
+		}else{
+			ff.pause(); cstate="off";
+			f.style.opacity = "0.5";
+		}
+	}
+
+
+	</script>
+</body>
+</html>
